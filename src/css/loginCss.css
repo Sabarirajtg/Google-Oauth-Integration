@@ -1,0 +1,28 @@
+.google-auth-btn {
+  margin-left: 42.5%;
+}
+
+.login-content {
+  padding: 15px;
+}
+
+.redirect-content {
+  margin-left: 36%;
+  padding: 12px;
+}
+
+.btn:hover{
+  color: grey;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .google-auth-btn {
+    margin-left: 21%;
+  }
+  .redirect-content {
+    display: flex;
+    margin-left: 6%;
+    padding: 12px;
+  }
+}
