@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
-import Form from "./Form";
+import { Redirect } from "react-router";
 
 const LOGIN_DATA = "loginData";
 
@@ -13,7 +13,9 @@ export default function GoogleAuth() {
       setIsLoggedIn(true);
     }
   };
-
+  if (isLoggedIn) {
+    return <Redirect to="/userDetails" />;
+  }
 
   return (
     <div>
@@ -24,7 +26,8 @@ export default function GoogleAuth() {
         cookiePolicy={"single_host_origin"}
       />
       <br />
-      <div style={{ marginLeft: "-75%" }}>{isLoggedIn && <Form />}</div>
+      
+      
     </div>
   );
 }
