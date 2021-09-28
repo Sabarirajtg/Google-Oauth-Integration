@@ -44,7 +44,6 @@ export default function Form() {
     localStorage.setItem(USER_DATA, JSON.stringify(formData));
     storeData(formData);
     openSnackbar("Successfull submitted");
-    localStorage.removeItem("loginData");
   };
 
   return (
