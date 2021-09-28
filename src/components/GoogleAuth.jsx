@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
-import { Redirect } from "react-router";
+import Form from "./Form";
 
 const LOGIN_DATA = "loginData";
 
@@ -13,9 +13,7 @@ export default function GoogleAuth() {
       setIsLoggedIn(true);
     }
   };
-  if (isLoggedIn) {
-    return <Redirect to="/userDetails" />;
-  }
+
 
   return (
     <div>
@@ -23,11 +21,10 @@ export default function GoogleAuth() {
         clientId="144751298604-r23utkf1a497n1666ntq0mc27i9sfagc.apps.googleusercontent.com"
         buttonText="Sign in with Google Account"
         onSuccess={responseGoogle}
-        // onFailure={responseGoogle}
         cookiePolicy={"single_host_origin"}
       />
       <br />
-      
+      <div style={{ marginLeft: "-75%" }}>{isLoggedIn && <Form />}</div>
     </div>
   );
 }

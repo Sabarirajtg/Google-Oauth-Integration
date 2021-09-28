@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import userDetails from "./pages/userDetails";
 import HomeSignIn from "./pages/HomeSignIn";
+import userDetails from "./pages/userDetails";
 
 export default function Routes() {
   return (
