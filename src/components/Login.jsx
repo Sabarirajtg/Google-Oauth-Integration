@@ -17,10 +17,8 @@ const theme = createTheme();
 export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    // const data = new FormData(event.currentTarget);
     window.alert("Kindly use google auth");
   };
-  localStorage.clear();
   return (
     <>
       <ThemeProvider theme={theme}>
