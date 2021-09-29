@@ -201,7 +201,7 @@ export default function Form() {
                     style={{ textDecoration: "none" }}
                     variant="body2"
                   >
-                    Click here to view the logs
+                    Click here to view logs
                   </Link>
                 </Grid>
               </Grid>
