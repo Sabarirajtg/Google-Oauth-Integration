@@ -43,7 +43,9 @@ export default function Form() {
     };
     localStorage.setItem(USER_DATA, JSON.stringify(formData));
     storeData(formData);
-    openSnackbar("Successfull submitted");
+    openSnackbar(
+      "Successfully submitted, You may now click the below log link to see the contents in local host"
+    );
   };
 
   return (
@@ -148,6 +150,7 @@ export default function Form() {
                     fullWidth
                     name="phone"
                     label="Phone Number"
+                    pattern="[1-9]{1}[0-9]{9}"
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">+91</InputAdornment>
@@ -192,9 +195,16 @@ export default function Form() {
                     Go back
                   </Link>
                 </Grid>
+                <Grid item>
+                  <Link
+                    to="/retrieve"
+                    style={{ textDecoration: "none" }}
+                    variant="body2"
+                  >
+                    Click here to view the logs
+                  </Link>
+                </Grid>
               </Grid>
-
-              
             </Box>
           </Box>
         </Container>

@@ -11,6 +11,7 @@ export default function App() {
 
   function storeData(data) {
     allUserData.push(data);
+    localStorage.setItem("allUserData", JSON.stringify(allUserData));
   }
 
   return (

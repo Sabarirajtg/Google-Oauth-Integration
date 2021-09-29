@@ -21,7 +21,7 @@ export default function HomeSignIn() {
         >
           <Button>
             Click here <br />
-            if the page does not redirect automatically
+            if the page does not redirect automatically after logging in
           </Button>
         </Link>
       </div>
