@@ -59,7 +59,7 @@ export default function Retrieve() {
                     align="center"
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
-                    <TableCell component="th" scope="row">
+                    <TableCell component="th" align="center" scope="row">
                       {row.name}
                     </TableCell>
                     <TableCell align="center">{row.email}</TableCell>
