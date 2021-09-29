@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Button,
   Table,
   TableContainer,
   Toolbar,
@@ -18,6 +19,12 @@ import { Link } from "react-router-dom";
 export default function Retrieve() {
   const rows = JSON.parse(localStorage.getItem("allUserData"));
 
+  const clearLogs = () => {
+    localStorage.removeItem("allUserData");
+    alert("All Logs has been cleared");
+    window.location.reload();
+  };
+
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -26,6 +33,9 @@ export default function Retrieve() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <div> Welcome </div>
             </Typography>
+            <Button color="inherit" onClick={clearLogs}>
+              Clear All logs
+            </Button>
           </Toolbar>
         </AppBar>
       </Box>
@@ -75,7 +85,8 @@ export default function Retrieve() {
           </Table>
         </TableContainer>
         <Link to="/" variant="body2" style={{ textDecoration: "none" }}>
-          Click Here to redirect<br />
+          Click Here to redirect
+          <br />
           Please fill details if no log found in localstorage
         </Link>
       </Box>

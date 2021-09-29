@@ -7,7 +7,7 @@
 }
 
 .redirect-content {
-  margin-left: 36%;
+  margin-left: 32%;
   padding: 12px;
 }
 
@@ -22,7 +22,7 @@
   }
   .redirect-content {
     display: flex;
-    margin-left: 6%;
+    margin-left: 3%;
     padding: 12px;
   }
 }

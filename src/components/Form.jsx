@@ -54,7 +54,7 @@ export default function Form() {
         <AppBar position="static">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              {data ? <div>Welcome {data.name} </div> : <div> Welcome </div>}
+              {data ? <div>Welcome, {data.name}! </div> : <div> Welcome </div>}
             </Typography>
           </Toolbar>
         </AppBar>
