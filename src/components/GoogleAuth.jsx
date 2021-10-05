@@ -8,7 +8,8 @@ export default function GoogleAuth() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const responseGoogle = (response) => {
-    localStorage.setItem(LOGIN_DATA, JSON.stringify(response.profileObj)).then(window.location.replace("/userDetails"));
+    localStorage.setItem(LOGIN_DATA, JSON.stringify(response.profileObj));
+    window.location.replace("/userDetails");
   };
   
 
