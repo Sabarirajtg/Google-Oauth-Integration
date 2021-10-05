@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
-import { Redirect } from "react-router";
+// import { Redirect } from "react-router";
 
 const LOGIN_DATA = "loginData";
 
 export default function GoogleAuth() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const responseGoogle = (response) => {
     localStorage.setItem(LOGIN_DATA, JSON.stringify(response.profileObj));
